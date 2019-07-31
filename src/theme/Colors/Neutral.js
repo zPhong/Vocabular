@@ -1,0 +1,23 @@
+export const neutral = {
+  ne1000: "#0a0c11",
+  ne950: "#151a23",
+  ne900: "#212835",
+  ne850: "#303848",
+  ne800: "#3e475a",
+  ne750: "#4e586b",
+  ne700: "#5e687d",
+  ne650: "#707a8f",
+  ne600: "#828ea1",
+  ne550: "#97a0b2",
+  ne500: "#abb4c4",
+  ne450: "#b2bac8",
+  ne400: "#bac1ce",
+  ne350: "#c1c8d4",
+  ne300: "#c8ced9",
+  ne250: "#ced4de",
+  ne200: "#d8dde6",
+  ne150: "#e1e6ed",
+  ne100: "#edf0f5",
+  ne50: "#f2f4f7",
+  ne0: "#fafbfc"
+};
