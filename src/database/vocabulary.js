@@ -265,7 +265,7 @@ export const vocabulary = {
       type: "Verb to add written information to a document to make it complete"
     },
     {
-      id: "ISnterest",
+      id: "Interest",
       type: "Noun",
       description: "money paid for the use of money lent"
     },
@@ -333,7 +333,7 @@ export const vocabulary = {
         "department responsible for recruitment and welfare of staff or employees"
     },
     {
-      id: "Mresident",
+      id: "President",
       type: "Noun",
       description:
         "the highest executive officer of a company; head of a company"
@@ -928,7 +928,6 @@ export const vocabulary = {
       type: "Verb ",
       description: "to express opinion in a group by voice or hand etc - also"
     },
-    { id: "", type: "banknote", description: "Noun" },
     {
       id: "Bill",
       type: "Noun",

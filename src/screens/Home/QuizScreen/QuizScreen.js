@@ -5,6 +5,7 @@ import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { NavigationScreenProps } from "react-navigation";
 import autobind from "autobind-decorator";
 import { observer } from "mobx-react";
+import Tts from "react-native-tts";
 import { Icon, Text } from "@components";
 import { getColor } from "@themes";
 import { QuestionStore } from "@stores";
@@ -26,6 +27,10 @@ class QuizScreen extends React.Component<PropsType, StateType> {
       selectedIndex: -1,
       isCheckAnswer: false
     };
+    Tts.getInitStatus().then(() => {
+      Tts.setDefaultLanguage("en-US");
+      Tts.setDefaultRate(0.4);
+    });
   }
 
   componentDidMount() {
@@ -34,15 +39,26 @@ class QuizScreen extends React.Component<PropsType, StateType> {
 
   @autobind
   onSelectAnswer(index: number) {
-    const { selectedIndex } = this.state;
+    const { selectedIndex, isCheckAnswer } = this.state;
+    const {
+      quiz: { correctAnswer, answers }
+    } = QuestionStore;
     if (selectedIndex < 0) {
       this.setState({ selectedIndex: index }, () => {
-        setTimeout(() => {
+        if (this.timeout) {
+          clearTimeout(this.timerHandle);
+        }
+        this.timeout = setTimeout(() => {
           this.setState({
             isCheckAnswer: true
           });
-        }, 2000);
+        }, 1000);
       });
+    }
+    if (isCheckAnswer) {
+      if (correctAnswer === answers[index]) {
+        Tts.speak(correctAnswer);
+      }
     }
   }
 
