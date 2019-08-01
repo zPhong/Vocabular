@@ -1,8 +1,8 @@
-import type {
-  ViewStyleProp,
-  TextStyleProp
-} from "react-native/Libraries/StyleSheet/StyleSheet";
+// @flow
 
+import type { TextStyleProp } from "react-native/Libraries/StyleSheet/StyleSheet";
+
+export type { TextStyleProp };
 export type TypographyType = {
   title: TextStyleProp,
   body: TextStyleProp,

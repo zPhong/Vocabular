@@ -1,15 +1,21 @@
 // @flow
-import * as React from "react";
-import { createStackNavigator, NavigationScreenProps } from "react-navigation";
 
-const HomeStack = createSwitchNavigator(
+import {
+  createStackNavigator,
+  withNavigation,
+  createAppContainer
+} from "react-navigation";
+import QuizScreen from "../QuizScreen/QuizScreen";
+
+const HomeStack = createStackNavigator(
   {
-    ThemeSelect,
-    Quiz
+    // ThemeSelect,
+    QuizScreen
   },
   {
-    initialRouteName: "ThemeSelect"
+    initialRouteName: "QuizScreen",
+    headerMode: "none"
   }
 );
 
-export { HomeStack };
+export default withNavigation(HomeStack);

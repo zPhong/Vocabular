@@ -1,8 +1,9 @@
 // @flow
 
 import * as React from "react";
-import { AppName } from "./Svg";
 import Svg from "react-native-svg";
+
+import { AppName, icBack } from "./Svg";
 
 type PropsType = {
   name: string,
@@ -12,7 +13,8 @@ type PropsType = {
 };
 
 const iconList = {
-  AppName
+  AppName,
+  icBack
 };
 
 export default class Icon extends React.Component<PropsType> {

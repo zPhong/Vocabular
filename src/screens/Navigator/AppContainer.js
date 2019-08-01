@@ -1,22 +1,22 @@
 // @flow
-import * as React from "react";
-import {
-  createSwitchNavigator,
-  createAppContainer,
-  NavigationScreenProps
-} from "react-navigation";
+
+import { createSwitchNavigator, createAppContainer } from "react-navigation";
+import SplashScreen from "../SplashScreen/SplashScreen";
+import HomeStack from "../Home/Navigator/HomeStack";
 
 const AppStack = createSwitchNavigator(
   {
-    Splash,
-    Home
+    Splash: {
+      screen: SplashScreen
+    },
+    Home: HomeStack
   },
   {
-    initialRouteName: "Splash"
+    initialRouteName: "Splash",
+    headerMode: "none"
   }
 );
 
-const AppContainer = createAppContainer(AppStack)
-);
+const AppContainer = createAppContainer(AppStack);
 
 export { AppContainer };

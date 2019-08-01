@@ -11,12 +11,13 @@
     "max-len": ["error", 120],
     "quotes": [
       "error",
-      "single",
+      "double",
       {
         "avoidEscape": true
       }
     ],
-    "indent": ["error", 4],
+    "linebreak-style": 0,
+    "indent": ["error", 2],
     "object-curly-spacing": 0,
     "no-use-before-define": 0,
     "new-cap": 0,
@@ -33,8 +34,8 @@
         "extensions": [".js", ".jsx"]
       }
     ],
-    "react/jsx-indent": [2, 4],
-    "react/jsx-indent-props": [2, 4],
+    "react/jsx-indent": [2],
+    "react/jsx-indent-props": [2],
     "react-native/no-unused-styles": 2,
     "react-native/split-platform-components": 2,
     "flowtype/boolean-style": [2, "boolean"],

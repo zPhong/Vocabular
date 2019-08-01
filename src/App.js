@@ -6,17 +6,16 @@
  * @flow
  */
 
-import React, { Fragment } from "react";
-import { SafeAreaView } from "react-native";
-
+import * as React from "react";
+import { SafeAreaView, StatusBar } from "react-native";
 import { AppContainer } from "@screens/Navigator";
+import { getColor } from "@themes";
 
-const App = () => {
-  return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <AppContainer />
-    </SafeAreaView>
-  );
-};
+const App = (): React.Node => (
+  <SafeAreaView style={{ flex: 1 }}>
+    <StatusBar barStyle="light-content" backgroundColor={getColor("bg")} />
+    <AppContainer />
+  </SafeAreaView>
+);
 
 export default App;
